@@ -1,10 +1,10 @@
 # flashcards.basic
-basic flashcards repo 
+basic flashcards repo <br/>
 
-lost my first github account :( getting back with some simple projects
-<em>Project: basic flashcard app </em>
-flashcards/
-├── storage.py   # Reads/writes JSON
-├── engine.py    # Manages scores, decks, and card progression
-├── cli.py       # Handles console prompts and rich outputs
-└── main.py      # Entry point connecting them
+lost my first github account :( getting back with some simple projects <br/>
+<em>Project: basic flashcard app </em> <br/>
+flashcards/ <br/>
+├── storage.py   # Reads/writes JSON <br/>
+├── engine.py    # Manages scores, decks, and card progression<br/>
+├── cli.py       # Handles console prompts and rich outputs<br/>
+└── main.py      # Entry point connecting them<br/>
