@@ -5,7 +5,8 @@
     },
     {
         "q": "Which HTTP status code represents 'Unauthorized'?",
-        "a": "401"
+        "a": "401",
+        "box": 2
     },
     {
         "q": "What data structure does Python use internally for dictionaries?",
@@ -33,7 +34,8 @@
     },
     {
         "q": "How many values can 2 bits represent?",
-        "a": "4"
+        "a": "4",
+        "box": 2
     },
     {
         "q": "What is the Big O of accessing an array by index?",
@@ -53,7 +55,8 @@
     },
     {
         "q": "What is the Big O of two nested loops over n items?",
-        "a": "O(n\u00b2)"
+        "a": "O(n\u00b2)",
+        "box": 1
     },
     {
         "q": "How many sides does a triangle have?",
@@ -82,6 +85,11 @@
     {
         "q": "Big O notation of bubble sort",
         "a": "O(n^2)",
+        "box": 2
+    },
+    {
+        "q": "What's the programming language used to style webpages",
+        "a": "CSS",
         "box": 1
     }
 ]
