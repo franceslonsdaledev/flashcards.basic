@@ -1,40 +1,38 @@
-import json
-import random
+
+
 from pathlib import Path
+import cli
+import engine
+import storage
 
-DATA_PATH = Path(__file__).parent / "card.json"
+DATA_FILE= Path("card.json")
 
-def load_cards():
-    if not DATA_PATH.exists():
-        return []
-    with open(DATA_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def run_quiz():
-    cards = load_cards()
+def run_quiz() -> None:
+    cards = storage.load_cards()
     if not cards:
-        print("No cards available.")
+        cli.show_empty_deck_message()
         return
 
-    random.shuffle(cards)
+    deck = engine.pre_deck(cards)
     score = 0
-
-    print("\n--- FLASHCARDS (Type answer, or 'q' to quit) ---\n")
     attempted = 0
-    for card in cards:
-        print(f"Q: {card['q']}")
-        answer = input("A: ").strip()
-        if answer.lower() == 'q':
+    total_deck = len(deck)
+
+    cli.show_welcome_message()
+
+    for index, card in enumerate(deck):
+        user_answer = cli.prompt_answer(card['q'])
+        if user_answer.lower() == 'q':
             break
         attempted += 1
-        if answer == card['a']:
-            print("Correct!\n")
+        correct = engine.check_answer(user_answer, card['a'])
+        if correct:
             score += 1
+            cli.show_correct_answer()
         else:
-            print(f"Incorrect! The correct answer is: {card['a']}\n")
-    print(f"Session ended. Score: {score}/{attempted}")
+            cli.show_incorrect_answer(card['a'])
 
+    cli.show_summary(score, attempted, total_deck)
 
 if __name__ == "__main__":
     run_quiz()
-    
