@@ -14,7 +14,8 @@
     },
     {
         "q": "What is binary 1010 in decimal?",
-        "a": "10"
+        "a": "10",
+        "box": 2
     },
     {
         "q": "How many bits are in 1 byte?",
@@ -30,12 +31,13 @@
     },
     {
         "q": "How many values can 1 bit represent?",
-        "a": "2"
+        "a": "2",
+        "box": 2
     },
     {
         "q": "How many values can 2 bits represent?",
         "a": "4",
-        "box": 2
+        "box": 3
     },
     {
         "q": "What is the Big O of accessing an array by index?",
@@ -76,7 +78,8 @@
     },
     {
         "q": "What number represents true in many languages?",
-        "a": "1"
+        "a": "1",
+        "box": 2
     },
     {
         "q": "How many possible values does a Boolean have?",
@@ -90,6 +93,6 @@
     {
         "q": "What's the programming language used to style webpages",
         "a": "CSS",
-        "box": 1
+        "box": 2
     }
 ]
