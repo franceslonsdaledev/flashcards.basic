@@ -1,0 +1,22 @@
+[
+  {"q": "What is the time complexity of lookup in a balanced BST?", "a": "O(log n)"},
+  {"q": "Which HTTP status code represents 'Unauthorized'?", "a": "401"},
+  {"q": "What data structure does Python use internally for dictionaries?", "a": "Hash table"},
+    {"q": "What is binary 1010 in decimal?", "a": "10"},
+	{"q": "How many bits are in 1 byte?", "a": "8"},
+	{"q": "How many bits are in 16 bytes?", "a": "128"},
+	{"q": "What is the first index of an array in most languages?", "a": "0"},
+	{"q": "How many values can 1 bit represent?", "a": "2"},
+	{"q": "How many values can 2 bits represent?", "a": "4"},
+	{"q": "What is the Big O of accessing an array by index?", "a": "O(1)"},
+	{"q": "What is the Big O of searching an unsorted array?", "a": "O(n)"},
+	{"q": "What is the Big O of binary search?", "a": "O(log n)"},
+	{"q": "What is the Big O of a loop through n items?", "a": "O(n)"},
+	{"q": "What is the Big O of two nested loops over n items?", "a": "O(n²)"},
+	{"q": "How many sides does a triangle have?", "a": "3"},
+	{"q": "How many bits are in an IPv4 address?", "a": "32"},
+	{"q": "How many bits are in an IPv6 address?", "a": "128"},
+	{"q": "What number represents false in many languages?", "a": "0"},
+	{"q": "What number represents true in many languages?", "a": "1"},
+	{"q": "How many possible values does a Boolean have?", "a": "2"}
+]
