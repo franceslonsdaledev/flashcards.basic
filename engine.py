@@ -19,9 +19,16 @@ def calculate_score(attempted, correct):
     return (correct / attempted) * 100
 
 
-def update_card_box(cards, card_index, correct):
-    """Update the card box based on whether the answer was correct."""
-    if correct:
-        cards[card_index]['box'] = min(cards[card_index].get('box', 1) + 1, 5)  # Move to next box, max 5
+def update_card_stats(card: dict, is_correct: bool) -> None:
+    current_box = card.get('box', 1)
+    if is_correct:
+        card['box'] = min(current_box + 1, 5)
     else:
-        cards[card_index]['box'] = 1  # Reset to box 1 if incorrect
+        card['box'] = 1
+
+def create_card(question: str, answer: str) -> dict:
+    q = question.strip()
+    a = answer.strip()
+    if not q or not a:
+        raise ValueError("Question and answer cannot be blank.")
+    return {"q": q, "a": a, "box": 1}

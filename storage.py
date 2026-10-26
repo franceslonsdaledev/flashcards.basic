@@ -6,20 +6,16 @@ import json
 from pathlib import Path
 
 
-def load_cards():
-    """Load cards from the card.json file."""
-    DATA_PATH = Path(__file__).parent / "card.json"
-    if not DATA_PATH.exists():
+def load_cards(file_path: Path) -> list[dict]:
+    if not file_path.exists():
         return []
-    with open(DATA_PATH, "r", encoding="utf-8") as f:
-        try:
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
-        except json.JSONDecodeError:
-            print("Error: card.json is not a valid JSON file.")
-            return []
+    except json.JSONDecodeError:
+        print("Error: card.json is not a valid JSON file.")
+        return []
 
-def save_cards(cards):
-    """Save cards to the card.json file."""
-    DATA_PATH = Path(__file__).parent / "card.json"
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
+def save_cards(file_path: Path, cards: list[dict]) -> None:
+    with open(file_path, "w", encoding="utf-8") as f:
         json.dump(cards, f, indent=4)
